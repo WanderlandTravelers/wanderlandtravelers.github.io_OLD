@@ -23,6 +23,8 @@ before_deploy:
 - ssh-add $TRAVIS_BUILD_DIR/deploy_rsa
 - git config --global user.email "bradpitcher@gmail.com"
 - git config --global user.name "Brad Pitcher"
+- git remote remove origin
+- git remote add origin git@github.com:WanderlandTravelers/wanderlandtravelers.github.io.git
 addons:
   apt:
     sources:
