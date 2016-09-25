@@ -24,6 +24,10 @@
     "typography-plugin-code": "^0.13.0"
   },
   "devDependencies": {
+    "eslint": "^2.11.1",
+    "eslint-plugin-import": "^1.13.0",
+    "eslint-plugin-jsx-a11y": "1.5.3",
+    "eslint-plugin-react": "^5.2.2",
     "gh-pages": "^0.11.0"
   },
   "keywords": [
@@ -35,6 +39,7 @@
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-links && gh-pages -d public",
     "develop": "gatsby develop",
+    "lint": "eslint --ext .js,.jsx --ignore-path .gitignore .",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
