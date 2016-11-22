@@ -1,1 +1,3 @@
 node_modules/
+.gatsby-context.js
+components/responsive-images.js
