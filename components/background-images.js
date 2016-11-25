@@ -14,6 +14,7 @@ export default class BackgroundImages extends React.Component {
 
     this.updateDimensions = this.updateDimensions.bind(this)
     this.updatedDimensions = this.updatedDimensions.bind(this)
+    this.fullscreenClass = this.fullscreenClass.bind(this)
     this.fullscreenBUtton = this.fullscreenButton.bind(this)
     this.hideBUtton = this.hideButton.bind(this)
   }
@@ -41,20 +42,24 @@ export default class BackgroundImages extends React.Component {
     return (img.width / img.height) > (this.state.width / this.state.height)
   }
 
+  isFullScreen () {
+    return typeof(document) !== 'undefined' && document.webkitIsFullScreen;
+  }
+
   fullscreenButton () {
-    let classNames = ''
-    if (document.webkitIsFullScreen) {
-      classNames = 'fullscreen'
-    }
     return (
-      <a id="fullscreen" className={classNames} onClick={this.props.goFullscreen}>
+      <a
+        id="fullscreen"
+        className={this.fullscreenClass()}
+        onClick={this.props.goFullscreen}
+      >
         <Icon name="arrows-alt"/>
       </a>
     )
   }
 
   hideButton () {
-    if (!document.webkitIsFullScreen) {
+    if (!this.isFullScreen()) {
       return (
         <a id="hide-content" onClick={this.props.handleHideContent}>
           <Icon name={this.props.hide ? 'eye' : 'eye-slash'}/>
@@ -65,10 +70,7 @@ export default class BackgroundImages extends React.Component {
   }
 
   fullscreenClass () {
-    if (document.webkitIsFullScreen) {
-      return 'fullscreen'
-    }
-    return ''
+    return this.isFullScreen() ? 'fullscreen' : ''
   }
 
   render () {
