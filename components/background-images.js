@@ -28,8 +28,8 @@ export default class BackgroundImages extends React.Component {
 
   updatedDimensions () {
     return {
-      width: window.innerWidth,
-      height: window.innerHeight
+      width: (window && window.innerWidth) || null,
+      height: (window && window.innerHeight) || null
     }
   }
 
