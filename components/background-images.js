@@ -43,7 +43,7 @@ export default class BackgroundImages extends React.Component {
   }
 
   isFullScreen () {
-    return typeof(document) !== 'undefined' && document.webkitIsFullScreen;
+    return typeof(document) !== 'undefined' && document.webkitIsFullScreen
   }
 
   fullscreenButton () {
