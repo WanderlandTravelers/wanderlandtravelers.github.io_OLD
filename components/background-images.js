@@ -2,7 +2,6 @@ import React from 'react'
 import Slider from 'react-slick'
 import responsiveImages from './responsive-images.js'
 import {Icon} from 'react-fa'
-import ReactTooltip from 'react-tooltip'
 import '../css/background-images'
 // import 'slick-carousel/slick/slick.scss'
 // import 'slick-carousel/slick/slick-theme.scss'
@@ -99,7 +98,6 @@ export default class BackgroundImages extends React.Component {
                 width={this.isMoreLandscapey(image.images[0]) ? '100%' : 'auto'}
                 height={this.isMoreLandscapey(image.images[0]) ? 'auto' : '100%'}
               />
-              <ReactTooltip/>
               <img
                 className="blurred-image"
                 srcSet={image.srcset}
