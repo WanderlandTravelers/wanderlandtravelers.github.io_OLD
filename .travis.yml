@@ -38,6 +38,6 @@ script:
 deploy:
   provider: script
   skip_cleanup: true
-  script: travis_wait 50 npm run deploy
+  script: scripts/deploy.sh
   on:
     branch: develop
