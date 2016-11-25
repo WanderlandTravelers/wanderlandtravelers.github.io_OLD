@@ -9,22 +9,22 @@ import '../css/background-images'
 
 
 export default class BackgroundImages extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = this.updatedDimensions()
 
-    this.updateDimensions = this.updateDimensions.bind(this);
-    this.updatedDimensions = this.updatedDimensions.bind(this);
-    this.fullscreenBUtton = this.fullscreenButton.bind(this);
-    this.hideBUtton = this.hideButton.bind(this);
+    this.updateDimensions = this.updateDimensions.bind(this)
+    this.updatedDimensions = this.updatedDimensions.bind(this)
+    this.fullscreenBUtton = this.fullscreenButton.bind(this)
+    this.hideBUtton = this.hideButton.bind(this)
   }
 
   componentDidMount () {
-      window.addEventListener('resize', this.updateDimensions)
+    window.addEventListener('resize', this.updateDimensions)
   }
 
   componentWillUnmount () {
-      window.removeEventListener('resize', this.updateDimensions)
+    window.removeEventListener('resize', this.updateDimensions)
   }
 
   updatedDimensions () {

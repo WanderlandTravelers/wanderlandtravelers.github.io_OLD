@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
-import { SocialIcons } from 'react-social-icons';
+import { SocialIcons } from 'react-social-icons'
 import Helmet from "react-helmet"
 import { config } from 'config'
 import '../css/index'
@@ -9,7 +9,7 @@ import '../fonts/Pacifico.woff2'
 
 export default class Index extends React.Component {
   getContent () {
-    let classes = 'wt-center wt-index wt-box';
+    let classes = 'wt-center wt-index wt-box'
     if (this.props.hide) {
       classes += ' hidden'
     }
@@ -19,7 +19,7 @@ export default class Index extends React.Component {
       'https://www.facebook.com/wanderlandtravelers/',
       'https://twitter.com/wanderlandistas',
       'https://www.pinterest.com/wanderlandtravelers/',
-    ];
+    ]
     return (
       <article className={classes}>
         <header>

@@ -23,9 +23,9 @@ module.exports = React.createClass({
 
   goFullscreen () {
     if (document.webkitIsFullScreen) {
-      document.webkitExitFullscreen();
+      document.webkitExitFullscreen()
     } else {
-      document.getElementById('background-images').webkitRequestFullscreen();
+      document.getElementById('background-images').webkitRequestFullscreen()
     }
   },
 

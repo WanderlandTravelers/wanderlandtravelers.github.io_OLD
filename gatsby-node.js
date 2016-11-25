@@ -1,6 +1,6 @@
 var ResponsiveImageListPlugin = require("./plugins/responsive-image-list-plugin")
 
-exports.modifyWebpackConfig = function(config, env) {
+exports.modifyWebpackConfig = function (config, env) {
   config.plugin('responsive-image-list', ResponsiveImageListPlugin, ['./images/background', "./components/responsive-images.js"])
 
   config.removeLoader('images')
