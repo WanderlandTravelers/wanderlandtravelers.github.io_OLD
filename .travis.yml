@@ -13,7 +13,7 @@ before_install:
 - nvm install $NODE_VERSION
 - nvm use $NODE_VERSION
 - npm config set python `which python`
-- npm install -g "npm@3.10.8"
+- npm install -g "npm@3.10.10"
 - if [ $TRAVIS_OS_NAME == "linux" ]; then export CC="gcc-4.8"; export CXX="g++-4.8";
   export LINK="gcc-4.8"; export LINKXX="g++-4.8"; fi
 - gcc --version
