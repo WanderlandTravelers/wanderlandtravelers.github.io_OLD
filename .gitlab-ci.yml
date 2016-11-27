@@ -1,0 +1,12 @@
+image: node:4.6.0
+
+pages:
+  script:
+  - npm install -sg gatsby
+  - npm install -q
+  - gatsby build --prefix-links
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
