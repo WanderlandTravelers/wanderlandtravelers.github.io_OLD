@@ -47,106 +47,6 @@ html, body, #react-mount, #wt-outer-container, #wt-content {
 }
 
 
-article header {
-  position: relative;
-  height: 14%;
-  background-color: @primary-color;
-  border-top-left-radius: @box-radius;
-  border-top-right-radius: @box-radius;
-  box-shadow: 0 0.1em 0.3em grey;
-
-  svg {
-    height: 80%;
-    padding: 0 4% 2% 0;
-
-    path {
-      fill: #000;
-      stroke: #000;
-      stroke-width: 2px;
-      animation: drawfill 7s linear forwards;
-      -webkit-animation: drawfill 7s linear forwards;
-      -moz-animation: drawfill 7s linear forwards;
-      -o-animation: drawfill 7s linear forwards;
-      font-weight: bold;
-      font-family: 'Pacifico', cursive;
-      -inkscape-font-specification: Pacifico;
-
-      &.small {
-        fill: @primary-color;
-        stroke-dasharray: 200;
-        stroke-dashoffset: 200;
-        animation: draw 100s linear forwards;
-        -webkit-animation: draw 100s linear forwards;
-        -moz-animation: draw 100s linear forwards;
-        -o-animation: draw 100s linear forwards;
-      }
-    }
-
-    &#wanderland path {
-      stroke-dasharray: 1020;
-      stroke-dashoffset: 1020;
-    }
-
-    &#travelers {
-      path {
-        stroke-dasharray: 620;
-        stroke-dashoffset: 620;
-      }
-    }
-  }
-  @keyframes drawfill {
-    0% { fill-opacity: 0; stroke-opacity: 1; }
-    70% { stroke-dashoffset: 0; fill-opacity: 0; stroke-opacity: 1; }
-    100% { stroke-dashoffset: 0; fill-opacity: 1; stroke-opacity: 0; }
-  }
-  @-webkit-keyframes drawfill {
-    0% { fill-opacity: 0; stroke-opacity: 1; }
-    70% { stroke-dashoffset: 0; fill-opacity: 0; stroke-opacity: 1; }
-    100% { stroke-dashoffset: 0; fill-opacity: 1; stroke-opacity: 0; }
-  }
-  @keyframes draw {
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-  @-webkit-keyframes draw {
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-
-  @-moz-keyframes draw {
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-  @-o-keyframes draw {
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-
-  h1 {
-    font-family: 'Pacifico', cursive;
-    display: inline-block;
-    font-size: 2.1em;
-    line-height: 100%;
-    height: 100%;
-    width: 40%;
-    float: left;
-    padding: 1% 1% 0;
-
-    &:first-child {
-      text-align: right;
-      padding-right: 2%;
-    }
-
-    &:last-child {
-      text-align: left;
-    }
-  }
-}
-
 article {
   opacity: 1;
   transition: opacity;
@@ -155,6 +55,115 @@ article {
 
   &.hidden {
     opacity: 0;
+  }
+
+  header {
+    position: relative;
+    height: 14%;
+    background-color: @primary-color;
+    border-top-left-radius: @box-radius;
+    border-top-right-radius: @box-radius;
+    box-shadow: 0 0.1em 0.3em grey;
+
+    svg {
+      height: 80%;
+      padding: 0 4% 2% 0;
+
+      path {
+        fill: #000;
+        stroke: #000;
+        stroke-width: 2px;
+        font-weight: bold;
+        font-family: 'Pacifico', cursive;
+        -inkscape-font-specification: Pacifico;
+
+        &.small {
+          fill: @primary-color;
+          stroke-dasharray: 200;
+          stroke-dashoffset: 200;
+        }
+      }
+
+      &#wanderland path {
+        stroke-dasharray: 1020;
+        stroke-dashoffset: 1020;
+      }
+
+      &#travelers path {
+        stroke-dasharray: 620;
+        stroke-dashoffset: 620;
+      }
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      display: inline-block;
+      font-size: 2.1em;
+      line-height: 100%;
+      height: 100%;
+      width: 40%;
+      float: left;
+      padding: 1% 1% 0;
+
+      &:first-child {
+        text-align: right;
+        padding-right: 2%;
+      }
+
+      &:last-child {
+        text-align: left;
+      }
+    }
+  }  // header
+}  // article
+
+
+#background-images:not(.fullscreen) + #wt-content article:not(.hidden) {
+  header svg path {
+    animation: drawfill 7s linear forwards;
+    -webkit-animation: drawfill 7s linear forwards;
+    -moz-animation: drawfill 7s linear forwards;
+    -o-animation: drawfill 7s linear forwards;
+
+    &.small {
+      animation: draw 100s linear forwards;
+      -webkit-animation: draw 100s linear forwards;
+      -moz-animation: draw 100s linear forwards;
+      -o-animation: draw 100s linear forwards;
+    }
+  }
+}
+
+
+@keyframes drawfill {
+  0% { fill-opacity: 0; stroke-opacity: 1; }
+  70% { stroke-dashoffset: 0; fill-opacity: 0; stroke-opacity: 1; }
+  100% { stroke-dashoffset: 0; fill-opacity: 1; stroke-opacity: 0; }
+}
+@-webkit-keyframes drawfill {
+  0% { fill-opacity: 0; stroke-opacity: 1; }
+  70% { stroke-dashoffset: 0; fill-opacity: 0; stroke-opacity: 1; }
+  100% { stroke-dashoffset: 0; fill-opacity: 1; stroke-opacity: 0; }
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-moz-keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-o-keyframes draw {
+  to {
+    stroke-dashoffset: 0;
   }
 }
 
