@@ -20,32 +20,10 @@
   }
 }
 
-@keyframes delay_show {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
 .responsive-background-image {
   img {
     position: relative;
     margin: 0 auto;
-
-    &::before {
-      display: block;
-      height: 20px;
-      width: 200px;
-      background-color: black;
-      color: white;
-      content: "This photo was taken on 2016-11-11 at Borena Casino, Borena, CA";
-      opacity: 0;
-      transition: opacity;
-      transition-timing-function: ease-out;
-      transition-duration: 2000ms;
-    }
-
-    &:hover::before {
-      opacity: 1;
-    }
   }
 
   .blurred-image {
@@ -86,9 +64,6 @@
 
 #hide-content, #fullscreen {
   opacity: 0.6;
-  &:hover {
-    opacity: 0.8;
-  }
 }
 
 #background-images {
@@ -105,9 +80,6 @@
       font: normal normal normal 14px/1 FontAwesome;
       line-height: 3em !important;
       font-size: 18px;
-    }
-    &:hover {
-      opacity: 0.8;
     }
   }
 
@@ -134,22 +106,10 @@
   left: 5em;
 }
 
-@keyframes delay_hide {
-    from {opacity: 0.6;}
-    to {opacity: 0;}
-}
-
 #fullscreen.fullscreen,
 #background-images.fullscreen .slick-prev,
 #background-images.fullscreen .slick-next {
-  opacity: 0;
-  transition: opacity;
-  transition-timing-function: ease-out;
-  transition-duration: 1000ms;
-
-  &:hover {
-    opacity: 0.8;
-  }
+  opacity: 0.6;
 }
 
 @import "responsive/background-images.less";

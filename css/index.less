@@ -186,7 +186,7 @@ article {
   margin: 0 auto;
   height: 12.75%;
   display: block;
-  top: -19%;
+  top: -21%;
   clear: both;
 
   a {
@@ -202,35 +202,64 @@ article {
       padding: 1px;
     }
 
-    &:nth-child(1) svg:hover g.social-svg-mask {
-      fill: darken(rgb(63, 114, 155), 15%) !important;
+    &:nth-child(1) svg {
+      &:hover, &:active {
+        g.social-svg-mask {
+          fill: darken(rgb(63, 114, 155), 15%) !important;
+        }
+      }
     }
-    &:nth-child(2) svg:hover g.social-svg-mask {
-      fill: darken(rgb(255, 51, 51), 15%) !important;
+    &:nth-child(2) svg {
+      &:hover, &:active {
+        g.social-svg-mask {
+          fill: darken(rgb(255, 51, 51), 15%) !important;
+        }
+      }
     }
-    &:nth-child(3) svg:hover g.social-svg-mask {
-      fill: darken(rgb(59, 89, 152), 15%) !important;
+    &:nth-child(3) svg {
+      &:hover, &:active {
+        g.social-svg-mask {
+          fill: darken(rgb(59, 89, 152), 15%) !important;
+        }
+      }
     }
-    &:nth-child(4) svg:hover g.social-svg-mask {
-      fill: darken(rgb(0, 172, 237), 15%) !important;
+    &:nth-child(4) svg {
+      &:hover, &:active {
+        g.social-svg-mask {
+          fill: darken(rgb(0, 172, 237), 15%) !important;
+        }
+      }
     }
-    &:nth-child(5) svg:hover g.social-svg-mask {
-      fill: darken(rgb(203, 33, 40), 15%) !important;
+    &:nth-child(5) svg {
+      &:hover, &:active {
+        g.social-svg-mask {
+          fill: darken(rgb(203, 33, 40), 15%) !important;
+        }
+      }
     }
   }
 }
 
-iframe {
+.video-container {
+  width: 56%;
+  left: 22%;
   position: relative;
-  top: -16%;
-  display: block;
-  margin: 0 auto;
-  border: none;
-  box-shadow: @gray 0px 5px 20px;
+  bottom: 20%;
 
-  @media (max-width: 420px) {
-    width: 320px;
-    height: 180px;
+  .video-inner {
+    position:relative;
+    padding-bottom:56.25%;
+    padding-top:30px;
+    height:0;
+    overflow:hidden;
+
+    iframe {
+      position:absolute;
+    	top:0;
+    	left:0;
+    	width:100%;
+    	height:100%;
+    }
   }
 }
 
