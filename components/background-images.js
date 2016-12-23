@@ -94,7 +94,6 @@ export default class BackgroundImages extends React.Component {
           {responsiveImages.map((image, i) => (
             <div key={i} className="responsive-background-image">
               <img
-               data-tip="This photo was taken on 2016-11-11 at Borena Casino, Borena, CA"
                 srcSet={image.srcset}
                 src={image.src}
                 width={this.isMoreLandscapey(image.images[0]) ? '100%' : 'auto'}
