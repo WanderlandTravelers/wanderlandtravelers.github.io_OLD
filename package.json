@@ -36,7 +36,7 @@
     "jimp": "^0.2.27",
     "react-fa": "^4.1.2",
     "react-social-icons": "^2.5.1",
-    "responsive-loader": "^0.6.1",
+    "responsive-loader": "^0.7.0",
     "slick-carousel": "^1.6.0"
   },
   "keywords": [
